@@ -31,6 +31,11 @@ Função para inicializar um arquivo no sistema de arquivos hospedeiro com os bl
 
 Aloca os blocos, incluindo os blocos de metadados da estrutura do diretório.
 
+### cry_openfs()
+
+Função usada para abrir um sistema de arquivos já inicializado por initfs(). 
+
+
 ### cry_open()
 
 Abre um arquivo criptografado com uma chave **n**. Deve ser chamada antes de qualquer outra operação com o arquivo e especificar se o arquivo é aberto para leitura, escrita ou ambos.
