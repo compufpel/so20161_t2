@@ -1,8 +1,8 @@
-# Trabalho 2 -- Sistema de Arquivos Criptografado
+# Trabalho 2 - Sistema de Arquivos Criptografado
 
 ## Descrição 
 
-Para o trabalho 2, um sistema de arquivos criptografado será implementado em nível de usuário. 
+Para o trabalho 2, um sistema de arquivos criptografado será implementado em nível de usuário para sistemas de acordo com POSIX, especialmente Linux. Os alunos poderão realizar o trabalho em duplas.
 
 Normalmente, para implementar um sistema de arquivos é necessário ter acesso direito aos dispositivos. Para simplificar a implementação e depuração, um arquivo grande sobre um outro sistema de arquivos será usado. Este arquivo será usado para armazenar os descritores de arquivos e os blocos que os compõem.
 
@@ -24,6 +24,8 @@ Os blocos de dados dos arquivos devem ser criptografados com uma chave simples d
 A chave **NÃO** deve ser armazenada junto ao arquivo. Ela deve ser informada quando o arquivo é aberto e armazenada em estrutura de dados temporária de arquivos abertos do sistema. 
 
 ## Funções a serem implementadas
+
+Detalhes dos parâmetros e da semântica das funções estão descritas na documentação do arquivo crypfs.h. Outras funções podem ser implementadas, mas não devem ser visíveis aos usuários finais. O arquivo crypfs.h **NÃO** deve ser modificado.
 
 ### initfs()
 
@@ -58,15 +60,25 @@ Remove o arquivo e o fecha.  Retorna **1** se sucesso, **0** se erro.
 
 Fecha o arquivo.  Retorna **1** se sucesso, **0** se erro.
 
+## Casos de Teste
+
+O trabalho deverá conter um Makefile com pelo menos quatro testes, acessáveis através de `make test1`, `make test2`, ... Além de compilar o caso de teste, o comando `make testN` deverá executá-lo.
+
+Os casos de teste deverão conter operações de criação, escrita, leitura e remoção que mostrem o funcionamento correto do sistema. Sugere-se fortemente o uso da biblioteca `assert.h` e um estilo de saída similar ao caso de teste `main.c` fornecido com o primeiro trabalho.
 
 ## Avaliação
 
+Serão pontuados:
+
+- Implementação da `crypfs`: **6 pontos**
+- Casos de teste: **4 pontos**
 
 ## Cronograma
 
-
+- Entrega no github: **20/06/2016**
+- Apresentações (em ordem definida pelo professor): **21/06/2016 e 22/06/2016**
 
 ## Referências
 
-* [Cifra de César -- Wikipedia] https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar
+* [Cifra de César -- Wikipedia] (https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar)
 
