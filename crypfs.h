@@ -71,14 +71,14 @@ cry_desc_t * cry_openfs(char ** arquivo);
  * @param chave deslocamento a ser usado nos acessos
  * @return índice do arquivo aberto, FALHA se não abrir
  */
-arquivo_aberto_t cry_open(cry_desc_t *cry_desc, int acesso, char deslocamento);
+indice_arquivo_t cry_open(cry_desc_t *cry_desc, int acesso, char deslocamento);
 
 /** Fecha um arquivo criptografado.
  *
  * @param arquivo índice para a tabela de arquivos abertos
  * @return SUCESSO OU FALHA
  */
-int cry_close(arquivo_aberto_t arquivo);
+int cry_close(indice_arquivo_t arquivo);
 
 /** Lê bytes de um arquivo criptografado aberto.
  *
